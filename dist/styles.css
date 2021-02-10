@@ -1,0 +1,79 @@
+html,
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background: rgb(139, 189, 247);
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicator {
+    padding: 1rem;
+}
+
+span {
+    border-radius: 2rem;
+    padding: 0 0.5rem;
+}
+
+.red {
+    background: red;
+}
+
+.yellow {
+    background: yellow;
+}
+
+#message {
+    outline: 1px solid black;
+    background: white;
+    margin-top: 1rem;
+    width: 310px;
+    height: 100px;
+    overflow-y: scroll;
+}
+
+#message p {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.win {
+    background: lightgreen;
+}
+
+.error {
+    background: lightpink;
+}
+
+.board {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+.column {
+    width: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.row {
+    width: 40px;
+    height: 40px;
+    outline: 1px solid black;
+    border-radius: 50%;
+    user-select: none;
+}
