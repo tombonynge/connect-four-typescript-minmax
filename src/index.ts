@@ -87,45 +87,7 @@ export class Handler {
         div.prepend(p);
         // console.log(message);
     }
-
-    handleKey(key: string) {
-        // if (key === "q") {
-        //     this.boardHandler.log();
-        // }
-        // if (key === "w") {
-        //     this.computer.debug_analyseMove(this.boardHandler.getBoard(), this.recentMove, this.currentPlayer);
-        // }
-        // if (key === "1") {
-        //     this.currentPlayer = 1;
-        //     this.debug_indicatePlayer();
-        // }
-        // if (key === "2") {
-        //     this.currentPlayer = 2;
-        //     this.debug_indicatePlayer();
-        // }
-        // if (key === "z" && this.currentPlayer === 2) {
-        //     const move = this.computer.makeMove(this.boardHandler.getBoard());
-        //     if (move && move.col != -1) {
-        //         this.boardHandler.handleComputerChoice(move.col, move.row);
-        //         this.htmlHandler.update(move.col, move.row, this.currentPlayer);
-        //     }
-        // }
-        // // if (key === "x" && this.currentPlayer === 2) {
-        // //     let debug = true;
-        // //     console.log("minMax score:", this.computer.minMax(this.boardHandler.getBoard(), this.recentMove, 1, true));
-        // // }
-        // if (key === "m" && this.currentPlayer === 2) {
-        //     // console.log(utils.copyArray(this.boardHandler.getBoard()));
-        //     this.computer.debug_makeMove(this.boardHandler.getBoard());
-        // }
-        if (key === "z") {
-            console.log(this.computer.heuristicEval(this.boardHandler.getBoard(), this.recentMove, 2));
-        }
-    }
 }
 
 const handler = new Handler();
 handler.init();
-document.addEventListener("keydown", (e) => {
-    handler.handleKey(e.key);
-});
