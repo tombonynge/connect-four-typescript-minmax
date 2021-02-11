@@ -18,7 +18,7 @@ export class Handler {
     constructor() {
         this.htmlHandler = new HtmlHandler(7, 6, this);
         this.boardHandler = new BoardHandler(7, 6, this);
-        this.computer = new Computer(7, 6, 2, this);
+        this.computer = new Computer(7, 6, 4, this);
         this.currentPlayer = 1;
         this.isWon = false;
         this.recentMove = { col: 0, row: 0 };
@@ -87,7 +87,21 @@ export class Handler {
         div.prepend(p);
         // console.log(message);
     }
+
+    reset() {
+        const div = document.getElementById("message")!;
+        div.innerHTML = "";
+        this.currentPlayer = 1;
+        this.isWon = false;
+        this.boardHandler.reset();
+        this.htmlHandler.reset();
+    }
 }
 
 const handler = new Handler();
 handler.init();
+
+const reset = document.getElementById("reset-btn");
+reset?.addEventListener("click", () => {
+    handler.reset();
+});

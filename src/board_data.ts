@@ -139,4 +139,8 @@ export class BoardHandler {
         }
         return false;
     }
+
+    reset() {
+        this.board = this.buildBoard(this.COLS, this.ROWS);
+    }
 }

@@ -13,10 +13,11 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.indicator {
-    padding: 1rem;
+#instructions {
+    padding: 0.5rem;
 }
 
 span {

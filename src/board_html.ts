@@ -35,7 +35,6 @@ export class HtmlHandler {
             columns.forEach((element) => {
                 element.addEventListener("click", this.handleClick.bind(that));
             });
-            console.log("ready for input");
         } else {
             throw new Error("The board is undefined");
         }
@@ -59,5 +58,12 @@ export class HtmlHandler {
         let column = this.board!.querySelector(`#col-${col}`);
         let cell = column?.querySelector(`#row-${row}`);
         cell?.setAttribute("style", `background:${color}`);
+    }
+
+    reset() {
+        if (this.board) {
+            this.board.innerHTML = "";
+            this.create();
+        }
     }
 }
